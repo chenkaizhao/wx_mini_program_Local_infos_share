@@ -1,0 +1,78 @@
+<!--pages/index/index.wxml-->
+<swiper class="sliders">
+    <!-- <swiper-item>
+        <image src="/assets/swiper-images/img6.jpg" mode="aspectFill"></image>
+    </swiper-item>
+    <swiper-item>
+        <image src="/assets/swiper-images/img1.jpg" mode="aspectFill"></image>
+    </swiper-item>
+    <swiper-item>
+        <image src="/assets/swiper-images/img3.jpg" mode="aspectFill"></image>
+    </swiper-item> -->
+    <swiper-item wx:for="{{slides}}" wx:key="id">
+        <navigator wx:if="{{item.link}}" url="{{item.link}}">
+            <image src="{{item.image}}" mode="aspectFill"></image>
+        </navigator>
+        <image wx:else src="{{item.image}}" mode="aspectFill"></image>
+    </swiper-item>
+</swiper>
+
+<view class="grids">
+
+    <!-- <view class="items" wx:for="{{categories}}" wx:key="id">
+        <image src="{{item.icon}}"></image>
+        <text>{{item.name}}</text>
+    </view> -->
+
+    <navigator class="items" url="/pages/foodlist/foodlist">
+        <image src="/assets/grids-images/food.png"></image>
+        <text>吃货</text>
+    </navigator>
+    <view class="items">
+        <image src="/assets/grids-images/house.png"></image>
+        <text>房屋</text>
+    </view>
+    <view class="items">
+        <image src="/assets/grids-images/cars.png"></image>
+        <text>汽车</text>
+    </view>
+    <view class="items">
+        <image src="/assets/grids-images/travel-bag.png"></image>
+        <text>旅行</text>
+    </view>
+    <view class="items">
+        <image src="/assets/grids-images/play.png"></image>
+        <text>娱乐</text>
+    </view>
+    <view class="items">
+        <image src="/assets/grids-images/life.png"></image>
+        <text>生活</text>
+    </view>
+    <view class="items">
+        <image src="/assets/grids-images/dog.png"></image>
+        <text>宠物</text>
+    </view>
+    <view class="items">
+        <image src="/assets/grids-images/university.png"></image>
+        <text>大学</text>
+    </view>
+    <view class="items">
+        <image src="/assets/grids-images/work.png"></image>
+        <text>工作</text>
+    </view>
+</view>
+
+<view class="links">
+    <view class="items">
+        <image src="/assets/links-images/social.png"></image>
+        <text>交友</text>
+    </view>
+    <view class="items">
+        <image src="/assets/links-images/help.png"></image>
+        <text>求助</text>
+    </view>
+    <view class="items">
+        <image src="/assets/links-images/exchange.png"></image>
+        <text>汇率</text>
+    </view>
+</view>

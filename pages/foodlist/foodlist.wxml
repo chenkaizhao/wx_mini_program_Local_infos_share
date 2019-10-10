@@ -1,0 +1,60 @@
+<!--pages/foodlist/foodlist.wxml-->
+<view class="search-bar">
+    <!-- 考虑是否将搜索分离为单独页面，此页面只做推荐排序 -->
+    <view class="search-bar__form">
+        <!-- 可编辑时的搜索框 -->
+        <view class="search-bar__box">
+            <icon class="icon" type="search" size="14"></icon>
+            <input class="input" type="text" placeholder="search" />
+        </view>
+        <!-- 最初始时的搜索框 -->
+        <label class="search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+            <icon class="icon-search" type="search" size="14"></icon>
+            <view class="search-bar__text">搜索</view>
+        </label>
+    </view>
+    <!-- 取消搜索 -->
+    <view class="search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+</view>
+
+<view class="foodRecommendation">
+    <!-- 考虑是否用下拉菜单：排序和filter来代替按键，快捷键数量有限 -->
+    <!-- 考虑添加地图功能，api是否可用 -->
+    <!-- 考虑搜索条是否和快捷按键重复 -->
+    <button>奶茶</button>
+    <button>甜品</button>
+    <button>超市</button>
+    <button>川菜</button>
+    <button>粤菜</button>
+    <button>早茶</button>
+    <button>夜宵</button>
+    <button>烧烤</button>
+    <button>火锅</button>
+    <button>火锅</button>
+
+</view>
+
+<view class="cells">
+    <!-- 考虑表格样式 美工 -->
+    <navigator class="item" wx:for="{{shops}}" wx:key="id" url="/pages/fooddetail/fooddetail">
+        <image src="{{item.images[0]}}"></image>
+        <view class="infos">
+            <text class="name">商家：{{item.name}}</text>
+            <text class="phone">电话：{{item.phone}}</text>
+            <text class="address">地址：{{item.address}}</text>
+            <text class="hours">时间：{{item.businessHours}}</text>
+        </view>
+        <view class="common">
+            <!-- 考虑添加某公众用户推荐图片 -->
+            <text>{{item.score}}</text>
+            <text>推荐信息img</text>
+        </view>
+    </navigator>
+</view>
+<!-- 上拉刷新下一页 -->
+<view wx:if="{{hasMore}}" class="bottom-loading">
+    <image src="/assets/30.gif"></image>
+    <text>Loading</text>
+    <image src="/assets/30.gif"></image>
+</view>
+<view wx:else class="bottom-loading">没有了，别吉儿拉了</view>

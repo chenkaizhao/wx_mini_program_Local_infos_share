@@ -1,0 +1,153 @@
+/* pages/foodlist/foodlist.wxss */
+.search-bar {
+  position: relative;
+  padding: 8px 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  box-sizing: border-box;
+  background-color: #F1F1F1;
+  border-top: 1rpx solid #D7D6DC;
+  border-bottom: 1rpx solid #D7D6DC;
+  border-radius: 5px;
+}
+.search-bar__form {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: auto;
+          flex: auto;
+  border-radius: 5px;
+  background: #FFFFFF;
+  border: 1rpx solid #E6E6EA;
+}
+.search-bar__box {
+  position: relative;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+}
+.icon {
+  position: absolute;
+  left: 10px;
+  top: 7px;
+}
+.input {
+  height: 28px;
+  line-height: 28px;
+  font-size: 14px;
+}
+
+.search-bar__label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  border-radius: 3px;
+  text-align: center;
+  color: #9B9B9B;
+  background: #FFFFFF;
+  line-height: 28px;
+}
+.icon-search {
+  margin-right: 4px;
+  font-size: inherit;
+}
+.search-bar__text {
+  display: inline-block;
+  font-size: 16px;
+}
+
+.search-bar__cancel-btn {
+  margin-left: 10px;
+  line-height: 28px;
+  color: #09BB07;
+  white-space: nowrap;
+}
+
+
+.foodRecommendation{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    border-left: 1rpx solid #eee;
+    border-top: 1rpx solid #eee;
+    font-size: 28rpx;
+    color: #888;
+}
+.foodRecommendation button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 149.8rpx;
+    border-right: 1rpx solid #eee;
+    border-bottom: 1rpx solid #eee;
+    box-sizing: border-box;
+}
+
+
+
+.cells {
+    font-size: 25rpx;
+    background-color: #FFFFFF;
+}
+
+.cells .item {
+    display: flex;
+    border-radius: 5px;
+    border-top: 1rpx solid #D7D6DC;
+    border-left: 1rpx solid #D7D6DC;
+    border-right: 1rpx solid #D7D6DC;
+    border-bottom: 1rpx solid #D7D6DC;
+    margin-bottom: 2rpx;
+    height: 200rpx;
+}
+
+.cells .item image {
+    border-radius: 5px;
+    width: 200rpx;
+    height: 100%;
+    box-sizing: border-box;
+
+}
+.cells .item .infos {
+    display: flex;
+    flex-direction: column;
+    width: 445rpx;
+    height: 100%;
+    margin-left: 15rpx;
+    box-sizing: border-box;
+
+}
+.cells .item .common {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: rgb(233, 144, 144);
+    width: 88rpx;
+    height: 100%;
+    box-sizing: border-box;
+}
+.cells .item .common text {
+    text-align: center;
+}
+.cells .item .common image {
+    text-align: center;
+}
+
+.bottom-loading {
+    display: flex;
+    height: 50rpx;
+    background-color: #FFFFFF;
+    justify-content: center;
+}
+.bottom-loading image{
+    margin-top: 15rpx;
+    height: 20rpx;
+    width: 100rpx;
+}

@@ -1,0 +1,51 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/foodlist/foodlist",
+        "pages/recommendation/recommendations",
+        "pages/bring/bring",
+        "pages/profile/profile",
+        "pages/fooddetail/fooddetail"
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "#F1F1F1",
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "风城BBs",
+        "backgroundColor": "#F1F1F1",
+        "backgroundTextStyle": "light",
+        "enablePullDownRefresh": false
+    },
+    "tabBar": {
+        "color": "#999",
+        "selectedColor": "#444",
+        "backgroundColor": "#ffffff",
+        "borderStyle": "black",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "assets/tabs/home-heart-line.png",
+                "selectedIconPath": "assets/tabs/home-heart-fill.png"
+            },
+            {
+                "pagePath": "pages/recommendation/recommendations",
+                "text": "推荐",
+                "iconPath": "assets/tabs/chat-heart-line.png",
+                "selectedIconPath": "assets/tabs/chat-heart-fill.png"
+            },
+            {
+                "pagePath": "pages/bring/bring",
+                "text": "带货",
+                "iconPath": "assets/tabs/e-bike-2-line.png",
+                "selectedIconPath": "assets/tabs/e-bike-2-fill.png"
+            },
+            {
+                "pagePath": "pages/profile/profile",
+                "text": "我的",
+                "iconPath": "assets/tabs/account-box-line.png",
+                "selectedIconPath": "assets/tabs/account-box-fill.png"
+            }
+        ]
+    },
+    "sitemapLocation": "sitemap.json"
+}
